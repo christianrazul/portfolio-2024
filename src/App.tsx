@@ -1,3 +1,5 @@
+import { Button } from "./components/ui/button";
+
 function App() {
   return (
     <>
@@ -7,6 +9,7 @@ function App() {
           A freelance front-end developer and web designer helping startups all
           around the world gain their unfair advantage.
         </p>
+        <Button> Test </Button>
       </div>
     </>
   );
