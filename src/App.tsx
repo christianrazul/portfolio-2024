@@ -5,7 +5,7 @@ import { Separator } from "./components/ui/separator";
 
 const Navbar = () => {
   return (
-    <nav className="flex w-full items-center justify-between px-16 py-4">
+    <nav className="sticky flex w-full items-center justify-between px-16 py-4">
       <h1 className="text-2xl font-bold">Christian Razul</h1>
       <ul className="flex gap-8 text-lg">
         <li>
@@ -335,27 +335,55 @@ const Footer = () => {
 
           <Separator className="mt-1 bg-secondary-400" />
           <ul className="mt-2 font-satoshi">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Contact</li>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#projects">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
         <div className="w-1/5">
           <h2 className="text-xl font-bold text-accent-300">SOCIALS</h2>
           <Separator className="mt-1 bg-secondary-400" />
           <ul className="mt-2 font-satoshi">
-            <li>LinkedIn</li>
-            <li>GitHub</li>
-            <li>Twitter</li>
+            <li>
+              <a href="https://www.linkedin.com/in/rcrrazul/" target="_blank">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/christianrazul" target="_blank">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/christianrazul" target="_blank">
+                Twitter
+              </a>
+            </li>
           </ul>
         </div>
         <div className="w-1/5">
           <h2 className="text-xl font-bold text-accent-300">RESOURCES</h2>
           <Separator className="mt-1 bg-secondary-400" />
           <ul className="mt-2 font-satoshi">
-            <li>Pillarstack</li>
-            <li>Figma Community</li>
+            <li>
+              <a href="https://www.pillarstack.com/" target="_blank">
+                Pillarstack
+              </a>
+            </li>
+            <li>
+              <a href="https://www.figma.com/community" target="_blank">
+                Figma Community
+              </a>
+            </li>
           </ul>
         </div>
       </div>
