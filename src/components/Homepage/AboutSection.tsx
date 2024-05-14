@@ -1,40 +1,86 @@
+import { motion } from "framer-motion";
 import { SkillButton } from "../SkillButton";
 
 export const AboutSection = () => {
+  const textVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: (index: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: index * 0.1,
+        duration: 0.8,
+        type: "spring",
+        stiffness: 120,
+        damping: 12,
+      },
+    }),
+  };
+
   return (
     <section
       className="flex h-full w-3/4 flex-col justify-center gap-8"
       id="about"
     >
-      <h1 className="text-6xl font-bold leading-extratight">
+      <motion.h1
+        className="z-10 text-6xl font-bold leading-extratight"
+        variants={textVariants}
+        initial="hidden"
+        animate="visible"
+        custom={0}
+      >
         A little bit about me
-      </h1>
+      </motion.h1>
       <div className="flex gap-8">
         <div className="flex w-2/3 flex-col gap-8">
-          <p className="text-left font-satoshi text-lg leading-relaxed">
+          <motion.p
+            className="text-left font-satoshi text-lg leading-relaxed"
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            custom={1}
+          >
             Hi! I'm Chan, a passionate Web Developer based in Davao City,
             Philippines. I'm a recent Computer Science graduate but forever a
             student of the industry. I specialize in the frontend, primarily
             ReactJS and TypeScript, but love building with whatever tools are
             right for the job.
-          </p>
-          <p className="text-left font-satoshi text-lg leading-relaxed">
+          </motion.p>
+          <motion.p
+            className="text-left font-satoshi text-lg leading-relaxed"
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            custom={2}
+          >
             Currently, I am seeking opportunities to grow as a developer with a
             dynamic team that values creativity, strategic innovation, and a
             commitment to excellence. I am eager to contribute to projects that
             challenge my skills and allow me to grow alongside like-minded
             professionals in a supportive and forward-thinking environment.
-          </p>
-          <p className="text-left font-satoshi text-lg leading-relaxed">
+          </motion.p>
+          <motion.p
+            className="text-left font-satoshi text-lg leading-relaxed"
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            custom={3}
+          >
             Outside of work, you'll find me playing basketball or inside a video
             game. Tell me a game you love because I'm always down for a good
             gaming session! But anyway, whether it's front-end aesthetics or
             robust back-end systems, I create solutions that not only work well
             but also delight users. Let's connect.
-          </p>
+          </motion.p>
         </div>
         <div className="flex w-1/3 flex-col gap-6">
-          <div className="flex flex-col gap-4">
+          <motion.div
+            className="flex flex-col gap-4"
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            custom={0}
+          >
             <h2 className="text-xl font-bold">
               <i className="fa-solid fa-code mr-2"></i>
               Technical Skills
@@ -74,8 +120,14 @@ export const AboutSection = () => {
                 <SkillButton>CSS</SkillButton>
               </li>
             </ul>
-          </div>
-          <div className="flex flex-col gap-4">
+          </motion.div>
+          <motion.div
+            className="flex flex-col gap-4"
+            variants={textVariants}
+            initial="hidden"
+            animate="visible"
+            custom={2}
+          >
             <h2 className="text-xl font-bold">
               <i className="fa-solid fa-wrench mr-2"></i>
               Tools and Technologies
@@ -94,7 +146,7 @@ export const AboutSection = () => {
                 <SkillButton>Microsoft Office</SkillButton>
               </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

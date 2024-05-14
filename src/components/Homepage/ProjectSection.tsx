@@ -1,5 +1,47 @@
 import { Button } from "../ui/button";
 import { SkillButton } from "../SkillButton";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
+
+const Project = ({ children }: { children: React.ReactNode }) => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring", // Using a spring type transition
+        stiffness: 260, // Spring stiffness
+        damping: 20, // Damping for the spring
+        mass: 1, // Mass of the element being animated
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={variants}
+      className="z-10 flex gap-8"
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+export default Project;
 
 export const ProjectSection = () => {
   return (
@@ -14,7 +56,7 @@ export const ProjectSection = () => {
         </p>
       </div>
       <div className="flex w-full flex-col gap-8">
-        <div className="flex gap-8">
+        <Project>
           <img
             src="/assets/img/cv-architect.webp"
             alt="CV Architect"
@@ -53,8 +95,8 @@ export const ProjectSection = () => {
               </Button>
             </div>
           </div>
-        </div>
-        <div className="flex gap-8">
+        </Project>
+        <Project>
           <img
             src="/assets/img/market-basket.webp"
             alt="Market Basket"
@@ -92,8 +134,8 @@ export const ProjectSection = () => {
               </Button>
             </div>
           </div>
-        </div>
-        <div className="flex gap-8">
+        </Project>
+        <Project>
           <img
             src="/assets/img/memorycraft.webp"
             alt="MemoryCraft"
@@ -129,8 +171,8 @@ export const ProjectSection = () => {
               </Button>
             </div>
           </div>
-        </div>
-        <div className="flex gap-8">
+        </Project>
+        <Project>
           <img
             src="/assets/img/burger-heaven.webp"
             alt="MemoryCraft"
@@ -167,7 +209,7 @@ export const ProjectSection = () => {
               </Button>
             </div>
           </div>
-        </div>
+        </Project>
       </div>
     </section>
   );
