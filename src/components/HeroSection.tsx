@@ -1,8 +1,11 @@
 export const HeroSection = () => {
   return (
-    <section className="flex h-full w-3/4 items-center justify-center gap-16">
+    <section
+      className="flex h-full w-3/4 items-center justify-center gap-16"
+      id="home"
+    >
       <div className="flex flex-col gap-8">
-        <h1 className="leading-extratight text-6xl font-bold">
+        <h1 className="text-6xl font-bold leading-extratight">
           Front-end React Developer
         </h1>
         <p className="font-satoshi text-xl leading-relaxed">
@@ -33,7 +36,7 @@ export const HeroSection = () => {
         <img
           src="/assets/profile-picture.webp"
           alt="My picture"
-          className="border-secondary-700 rounded-2xl border shadow-lg"
+          className="rounded-2xl border border-secondary-700 shadow-lg"
         />
       </div>
     </section>
