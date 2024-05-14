@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -38,7 +37,7 @@ const ContactForm = () => {
     console.log(values);
   }
   return (
-    <section className="flex h-full w-3/4 items-start justify-between gap-16 font-satoshi">
+    <section className="relative z-10 flex h-full w-3/4 items-start justify-between gap-16 font-satoshi">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}

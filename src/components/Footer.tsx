@@ -2,7 +2,7 @@ import { Separator } from "./ui/separator";
 
 export const Footer = () => {
   return (
-    <footer className="flex h-full w-2/3 flex-col gap-8 py-8">
+    <footer className="relative z-10 flex h-full w-2/3 flex-col gap-8 py-8">
       <div className="flex w-full gap-8">
         <div className="w-3/5">
           <h2 className="text-xl font-bold text-accent-300">NAVIGATION</h2>

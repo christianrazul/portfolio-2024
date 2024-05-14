@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const ContactSection = () => {
   return (
     <section
@@ -8,7 +10,12 @@ export const ContactSection = () => {
         <h3 className="text-2xl font-bold text-accent-100">
           Got a project in mind?
         </h3>
-        <h1 className="text-9xl font-bold leading-extratight">GET IN TOUCH</h1>
+        <Link
+          to="/contact"
+          className="text-9xl font-bold leading-extratight hover:underline"
+        >
+          GET IN TOUCH
+        </Link>
       </div>
     </section>
   );

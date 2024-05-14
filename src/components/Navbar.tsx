@@ -3,7 +3,7 @@ import { HashLink } from "react-router-hash-link";
 
 export const Navbar = () => {
   return (
-    <nav className="flex w-full items-center justify-between px-16 py-4">
+    <nav className="relative z-10 flex w-full items-center justify-between px-16 py-4">
       <NavLink to="/">
         <h1 className="text-2xl font-bold">Christian Razul</h1>
       </NavLink>
