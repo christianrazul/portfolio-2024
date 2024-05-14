@@ -203,7 +203,10 @@ export const ProjectSection = () => {
                 </a>
               </Button>
               <Button className="bg-accent-400 font-satoshi">
-                <a href="https://memorycraft.vercel.app/" target="_blank">
+                <a
+                  href="https://burger-heaven-beta.vercel.app/"
+                  target="_blank"
+                >
                   Live Demo
                 </a>
               </Button>
