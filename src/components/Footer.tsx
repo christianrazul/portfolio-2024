@@ -1,4 +1,6 @@
+import { HashLink } from "react-router-hash-link";
 import { Separator } from "./ui/separator";
+import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -10,16 +12,20 @@ export const Footer = () => {
           <Separator className="mt-1 bg-secondary-400" />
           <ul className="mt-2 font-satoshi">
             <li>
-              <a href="#home">Home</a>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <a href="#about">About</a>
+              <HashLink smooth to="/#about">
+                About
+              </HashLink>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <HashLink smooth to="/#projects">
+                Projects
+              </HashLink>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
           </ul>
         </div>
