@@ -34,7 +34,7 @@ export const HeroSection = () => {
       id="home"
     >
       <DottedBackground />
-      <div className="flex flex-col gap-8">
+      <div className="relative z-10 flex flex-col gap-8">
         <motion.h1
           className="text-6xl font-bold leading-extratight"
           variants={textVariants}
