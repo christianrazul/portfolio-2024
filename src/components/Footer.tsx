@@ -38,6 +38,14 @@ export const Footer = () => {
               </a>
             </li>
             <li>
+              <a
+                href="https://www.facebook.com/christianrazul/"
+                target="_blank"
+              >
+                Facebook
+              </a>
+            </li>
+            <li>
               <a href="https://twitter.com/christianrazul" target="_blank">
                 Twitter
               </a>
