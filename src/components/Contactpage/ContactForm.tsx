@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import { motion } from "framer-motion";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
@@ -36,8 +37,30 @@ const ContactForm = () => {
     // ✅ This will be type-safe and validated.
     console.log(values);
   }
+
+  const textVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: (index: number) => ({
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: index * 0.1,
+        duration: 0.8,
+        type: "spring",
+        stiffness: 120,
+        damping: 12,
+      },
+    }),
+  };
+
   return (
-    <section className="relative z-10 flex h-full w-3/4 items-start justify-between gap-16 font-satoshi">
+    <motion.section
+      className="relative z-10 flex h-full w-3/4 items-start justify-between gap-16 font-satoshi"
+      variants={textVariants}
+      initial="hidden"
+      animate="visible"
+      custom={1}
+    >
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -152,7 +175,7 @@ const ContactForm = () => {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
