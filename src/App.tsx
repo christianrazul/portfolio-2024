@@ -8,10 +8,18 @@ const Navbar = () => {
     <nav className="flex w-full items-center justify-between px-16 py-4">
       <h1 className="text-2xl font-bold">Christian Razul</h1>
       <ul className="flex gap-8 text-lg">
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
       </ul>
     </nav>
   );
@@ -31,7 +39,10 @@ const SkillButton = ({ children }: SkillButtonProps) => {
 
 const AboutSection = () => {
   return (
-    <section className="flex h-full w-3/4 flex-col justify-center gap-8">
+    <section
+      className="flex h-full w-3/4 flex-col justify-center gap-8"
+      id="about"
+    >
       <h1 className="text-6xl font-bold leading-extratight">
         A little bit about me
       </h1>
@@ -129,7 +140,10 @@ const AboutSection = () => {
 
 const ContactSection = () => {
   return (
-    <section className="flex h-full w-3/4 flex-col items-center justify-center gap-8">
+    <section
+      className="flex h-full w-3/4 flex-col items-center justify-center gap-8"
+      id="contact"
+    >
       <div className="flex flex-col items-center justify-center">
         <h3 className="text-2xl font-bold text-accent-100">
           Got a project in mind?
@@ -142,7 +156,10 @@ const ContactSection = () => {
 
 const ProjectSection = () => {
   return (
-    <section className="flex h-full w-3/4 flex-col justify-center gap-8">
+    <section
+      className="flex h-full w-3/4 flex-col justify-center gap-8"
+      id="projects"
+    >
       <div className="flex flex-col gap-4">
         <h1 className="text-6xl font-bold leading-extratight">Projects</h1>
         <p className="text-left font-satoshi text-lg leading-relaxed">
