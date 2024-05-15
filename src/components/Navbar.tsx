@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import ResumePDF from "/Rudolph-Christian-Razul-Resume.pdf";
 
 interface DrawOutlineButtonProps {
   children: ReactNode;
@@ -10,7 +11,7 @@ const DrawOutlineButton = ({ children, ...rest }: DrawOutlineButtonProps) => {
   return (
     <button
       {...rest}
-      className="duration-[400ms] group relative px-2 py-1 font-satoshi text-accent-400 transition-colors hover:font-medium hover:text-accent-400"
+      className="duration-[400ms] group relative w-20 px-2 py-1 font-satoshi text-accent-400 transition-colors hover:font-medium hover:text-accent-400"
     >
       <span>{children}</span>
 
@@ -55,6 +56,13 @@ export const Navbar = () => {
           <NavLink to="/contact">
             <DrawOutlineButton>Contact</DrawOutlineButton>
           </NavLink>
+        </li>
+        <li>
+          <DrawOutlineButton>
+            <a href={ResumePDF} target="_blank">
+              Resume
+            </a>
+          </DrawOutlineButton>
         </li>
       </ul>
     </nav>
