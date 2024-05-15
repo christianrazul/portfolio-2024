@@ -62,7 +62,7 @@ const ContactForm = () => {
           toast({
             title: "Error sending your email",
             description: `There's been an error with your email, I'll get this fixed ASAP! For now you can contact me directly through razulchristian@gmail.com. Error details: ${error}`,
-            variant: "desctructive",
+            variant: "destructive",
             action: <ToastAction altText="Try again">Try again</ToastAction>,
           });
         },
