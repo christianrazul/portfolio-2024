@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import ResumePDF from "/Rudolph-Christian-Razul-Resume.pdf";
+import ResumePDF from "/Rudolph_Christian_Razul_Resume.pdf";
 
 interface DrawOutlineButtonProps {
   children: ReactNode;
