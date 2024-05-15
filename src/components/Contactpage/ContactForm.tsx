@@ -1,6 +1,8 @@
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -32,10 +34,29 @@ const ContactForm = () => {
     },
   });
 
+  const formRef = useRef<HTMLFormElement>(null);
+
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+
+    // check if form is null
+    const currentForm = formRef.current;
+    if (currentForm == null) return;
+
+    emailjs
+      .sendForm("service_lqhomjs", "template_dwopjx1", currentForm, {
+        publicKey: "rRJ9_8vcIVukD36Qd",
+      })
+      .then(
+        () => {
+          console.log("Form sent successfully!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        },
+      );
   }
 
   const textVariants = {
@@ -65,6 +86,7 @@ const ContactForm = () => {
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className="w-3/4 space-y-8"
+          ref={formRef}
         >
           <FormField
             control={form.control}
