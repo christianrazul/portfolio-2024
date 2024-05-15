@@ -14,7 +14,9 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
+import { useToast } from "../ui/use-toast";
 import { motion } from "framer-motion";
+import { ToastAction } from "../ui/toast";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
@@ -36,11 +38,9 @@ const ContactForm = () => {
 
   const formRef = useRef<HTMLFormElement>(null);
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  const { toast } = useToast();
 
+  function onSubmit(values: z.infer<typeof formSchema>) {
     // check if form is null
     const currentForm = formRef.current;
     if (currentForm == null) return;
@@ -51,10 +51,20 @@ const ContactForm = () => {
       })
       .then(
         () => {
-          console.log("Form sent successfully!");
+          console.log(values);
+          toast({
+            title: "Email sent successfully!",
+            description: "I'll be reaching out to you soon, thanks!",
+          });
+          form.reset({ name: "", email: "", subject: "", body: "" });
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          toast({
+            title: "Error sending your email",
+            description: `There's been an error with your email, I'll get this fixed ASAP! For now you can contact me directly through razulchristian@gmail.com. Error details: ${error}`,
+            variant: "desctructive",
+            action: <ToastAction altText="Try again">Try again</ToastAction>,
+          });
         },
       );
   }
