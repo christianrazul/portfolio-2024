@@ -30,13 +30,13 @@ export const HeroSection = () => {
 
   return (
     <section
-      className="flex h-full w-5/6 flex-col items-center justify-center gap-16 lg:h-1/2 lg:w-3/4 lg:flex-row"
+      className="flex h-full w-5/6 flex-col items-center justify-center gap-8 lg:h-1/2 lg:w-3/4 lg:flex-row lg:gap-16"
       id="home"
     >
       {/* Hero Text */}
-      <div className="relative z-10 flex flex-col gap-8">
+      <div className="relative z-10 order-2 flex flex-col items-center gap-8 lg:order-1 lg:items-start">
         <motion.h1
-          className="text-center text-7xl font-bold leading-extratight lg:text-left lg:text-6xl"
+          className="w-3/4 text-center text-6xl font-bold leading-extratight lg:w-full lg:text-left lg:text-6xl"
           variants={textVariants}
           initial="hidden"
           animate="visible"
@@ -45,7 +45,7 @@ export const HeroSection = () => {
           Front-end React Developer
         </motion.h1>
         <motion.p
-          className="text-center font-satoshi text-xl leading-relaxed lg:text-left"
+          className="w-3/4 text-center font-satoshi text-xl leading-relaxed lg:w-10/12 lg:text-left"
           variants={textVariants}
           initial="hidden"
           animate="visible"
@@ -82,7 +82,7 @@ export const HeroSection = () => {
         </motion.div>
       </div>
       {/* Picture */}
-      <div className="relative z-10 min-w-60 max-w-80 overflow-hidden">
+      <div className="relative z-10 order-1 min-w-60 max-w-80 overflow-hidden lg:order-2">
         <motion.div
           className="absolute bottom-0 left-0 right-0 bg-primary-200"
           initial="hidden"
