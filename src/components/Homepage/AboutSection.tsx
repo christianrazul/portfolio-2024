@@ -19,11 +19,11 @@ export const AboutSection = () => {
 
   return (
     <section
-      className="flex h-full w-3/4 flex-col justify-center gap-8"
+      className="flex h-full w-5/6 flex-col justify-center gap-8 lg:h-1/2 lg:w-3/4"
       id="about"
     >
       <motion.h1
-        className="z-10 text-6xl font-bold leading-extratight"
+        className="z-10 text-center text-6xl font-bold leading-extratight md:text-left"
         variants={textVariants}
         initial="hidden"
         animate="visible"
@@ -31,10 +31,11 @@ export const AboutSection = () => {
       >
         A little bit about me
       </motion.h1>
-      <div className="flex gap-8">
-        <div className="flex w-2/3 flex-col gap-8">
+      <div className="flex flex-col gap-8 md:flex-row">
+        {/* About me Text */}
+        <div className="z-10 flex w-full flex-col gap-6 md:w-2/3 md:gap-8">
           <motion.p
-            className="text-left font-satoshi text-lg leading-relaxed"
+            className="text-center font-satoshi text-lg leading-relaxed md:text-left"
             variants={textVariants}
             initial="hidden"
             animate="visible"
@@ -47,7 +48,7 @@ export const AboutSection = () => {
             right for the job.
           </motion.p>
           <motion.p
-            className="text-left font-satoshi text-lg leading-relaxed"
+            className="text-center font-satoshi text-lg leading-relaxed md:text-left"
             variants={textVariants}
             initial="hidden"
             animate="visible"
@@ -60,7 +61,7 @@ export const AboutSection = () => {
             professionals in a supportive and forward-thinking environment.
           </motion.p>
           <motion.p
-            className="text-left font-satoshi text-lg leading-relaxed"
+            className="text-center font-satoshi text-lg leading-relaxed md:text-left"
             variants={textVariants}
             initial="hidden"
             animate="visible"
@@ -73,9 +74,10 @@ export const AboutSection = () => {
             but also delight users. Let's connect.
           </motion.p>
         </div>
-        <div className="flex w-1/3 flex-col gap-6">
+        {/* Skills */}
+        <div className="flex w-full flex-col gap-6 md:w-1/3">
           <motion.div
-            className="flex flex-col gap-4"
+            className="z-10 flex flex-col gap-4"
             variants={textVariants}
             initial="hidden"
             animate="visible"
@@ -122,7 +124,7 @@ export const AboutSection = () => {
             </ul>
           </motion.div>
           <motion.div
-            className="flex flex-col gap-4"
+            className="z-10 flex flex-col gap-4"
             variants={textVariants}
             initial="hidden"
             animate="visible"
