@@ -30,13 +30,13 @@ export const HeroSection = () => {
 
   return (
     <section
-      className="flex h-full w-3/4 items-center justify-center gap-16"
+      className="flex h-full w-5/6 flex-col items-center justify-center gap-16 lg:h-1/2 lg:w-3/4 lg:flex-row"
       id="home"
     >
-      <DottedBackground />
+      {/* Hero Text */}
       <div className="relative z-10 flex flex-col gap-8">
         <motion.h1
-          className="text-6xl font-bold leading-extratight"
+          className="text-center text-7xl font-bold leading-extratight lg:text-left lg:text-6xl"
           variants={textVariants}
           initial="hidden"
           animate="visible"
@@ -45,18 +45,19 @@ export const HeroSection = () => {
           Front-end React Developer
         </motion.h1>
         <motion.p
-          className="font-satoshi text-xl leading-relaxed"
+          className="text-center font-satoshi text-xl leading-relaxed lg:text-left"
           variants={textVariants}
           initial="hidden"
           animate="visible"
           custom={1}
         >
-          Hi, I'm Christian Razul. I'm a freelance Front-end Developer based in
-          Davao City, Philippines.
+          Hi, I'm Christian Razul. I can help you transform your Concept to a
+          Seamless User Experience.
         </motion.p>
 
+        {/* CTA Buttons */}
         <motion.div
-          className="flex gap-8"
+          className="flex justify-center gap-8 lg:justify-start"
           variants={textVariants}
           initial="hidden"
           animate="visible"
@@ -80,7 +81,8 @@ export const HeroSection = () => {
           </a>
         </motion.div>
       </div>
-      <div className="relative w-1/2 overflow-hidden">
+      {/* Picture */}
+      <div className="relative z-10 min-w-60 max-w-80 overflow-hidden">
         <motion.div
           className="absolute bottom-0 left-0 right-0 bg-primary-200"
           initial="hidden"
@@ -93,6 +95,7 @@ export const HeroSection = () => {
           className="rounded-2xl border border-secondary-700 shadow-lg"
         />
       </div>
+      <DottedBackground />
     </section>
   );
 };
