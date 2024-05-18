@@ -42,12 +42,12 @@ export const ContactSection = () => {
     >
       <GridBackground />
       <div className="z-10 flex flex-col items-center justify-center">
-        <h3 className="text-2xl font-bold text-accent-100">
+        <h3 className="text-xl font-bold text-accent-100 lg:text-2xl">
           Got a project in mind?
         </h3>
         <Link
           to="/contact"
-          className="text-9xl font-bold leading-extratight transition-all ease-out hover:text-accent-200 hover:underline"
+          className="text-center text-7xl font-bold leading-extratight transition-all ease-out hover:text-accent-200 hover:underline lg:text-9xl"
         >
           GET IN TOUCH
         </Link>
