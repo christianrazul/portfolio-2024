@@ -46,13 +46,15 @@ export default Project;
 export const ProjectSection = () => {
   return (
     <section
-      className="flex h-full w-3/4 flex-col justify-center gap-8"
+      className="flex h-full w-5/6 flex-col items-center justify-center gap-8 lg:h-1/2 lg:w-3/4 2xl:gap-16"
       id="projects"
     >
       {/* Heading and Subheading */}
-      <div className="flex flex-col gap-4">
-        <h1 className="text-6xl font-bold leading-extratight">Projects</h1>
-        <p className="text-left font-satoshi text-lg leading-relaxed">
+      <div className="flex w-full flex-col gap-4">
+        <h1 className="text-center text-4xl font-bold leading-extratight lg:text-left lg:text-6xl">
+          Projects
+        </h1>
+        <p className="text-md text-center font-satoshi leading-relaxed lg:text-left lg:text-lg">
           Check out some of the projects I've been working on recently.
         </p>
       </div>

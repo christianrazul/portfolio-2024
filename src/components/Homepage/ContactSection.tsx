@@ -33,7 +33,7 @@ export const ContactSection = () => {
   };
   return (
     <motion.section
-      className="relative flex h-full w-3/4 flex-col items-center justify-center gap-8"
+      className="relative my-20 flex h-full w-5/6 flex-col items-center justify-center gap-8 lg:w-3/4"
       id="contact"
       ref={ref}
       variants={sectionVariants}
@@ -47,7 +47,7 @@ export const ContactSection = () => {
         </h3>
         <Link
           to="/contact"
-          className="text-center text-7xl font-bold leading-extratight transition-all ease-out hover:text-accent-200 hover:underline lg:text-9xl"
+          className="text-5xl font-bold leading-extratight transition-all ease-out hover:text-accent-200 hover:underline lg:text-8xl xl:text-9xl"
         >
           GET IN TOUCH
         </Link>

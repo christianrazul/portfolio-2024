@@ -23,7 +23,7 @@ export const AboutSection = () => {
       id="about"
     >
       <motion.h1
-        className="z-10 text-center text-6xl font-bold leading-extratight md:text-left"
+        className="z-10 text-center text-4xl font-bold leading-extratight md:text-left lg:text-6xl"
         variants={textVariants}
         initial="hidden"
         animate="visible"
@@ -35,7 +35,7 @@ export const AboutSection = () => {
         {/* About me Text */}
         <div className="z-10 flex w-full flex-col gap-6 md:w-2/3 md:gap-8">
           <motion.p
-            className="text-center font-satoshi text-lg leading-relaxed md:text-left"
+            className="text-md text-left font-satoshi leading-relaxed lg:text-lg"
             variants={textVariants}
             initial="hidden"
             animate="visible"
@@ -48,7 +48,7 @@ export const AboutSection = () => {
             right for the job.
           </motion.p>
           <motion.p
-            className="text-center font-satoshi text-lg leading-relaxed md:text-left"
+            className="text-md text-left font-satoshi leading-relaxed lg:text-lg"
             variants={textVariants}
             initial="hidden"
             animate="visible"
@@ -61,7 +61,7 @@ export const AboutSection = () => {
             professionals in a supportive and forward-thinking environment.
           </motion.p>
           <motion.p
-            className="text-center font-satoshi text-lg leading-relaxed md:text-left"
+            className="text-md text-left font-satoshi leading-relaxed lg:text-lg"
             variants={textVariants}
             initial="hidden"
             animate="visible"

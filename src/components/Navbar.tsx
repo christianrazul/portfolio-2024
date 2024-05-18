@@ -32,11 +32,12 @@ const DrawOutlineButton = ({ children, ...rest }: DrawOutlineButtonProps) => {
 
 export const Navbar = () => {
   return (
-    <nav className="relative z-10 flex w-full items-center justify-between px-16 py-4">
+    <nav className="relative z-10 flex w-full items-center justify-between overflow-x-hidden px-8 py-4 lg:px-16">
       <NavLink to="/">
         <h1 className="text-2xl font-bold">Christian Razul</h1>
       </NavLink>
-      <ul className="flex gap-4 text-lg">
+      <button className="flex h-8 w-8 lg:hidden">X</button>
+      <ul className="hidden gap-4 text-lg lg:flex">
         <li>
           <NavLink to="/">
             <DrawOutlineButton>Home</DrawOutlineButton>

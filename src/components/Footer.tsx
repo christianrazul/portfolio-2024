@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="relative z-10 flex h-full w-2/3 flex-col gap-8 py-8">
-      <div className="flex w-full gap-8">
-        <div className="w-3/5">
+    <footer className="relative z-10 flex h-full w-5/6 flex-col gap-8 py-8 lg:w-2/3">
+      <div className="flex w-full flex-wrap gap-4 lg:flex-nowrap lg:gap-8">
+        {/* Navigation */}
+        <div className="w:full flex-grow lg:w-3/5">
           <h2 className="text-xl font-bold text-accent-300">NAVIGATION</h2>
-
           <Separator className="mt-1 bg-secondary-400" />
           <ul className="mt-2 font-satoshi">
             <li>
@@ -29,7 +29,9 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-1/5">
+
+        {/* Socials */}
+        <div className="w:full flex-grow lg:w-1/5">
           <h2 className="text-xl font-bold text-accent-300">SOCIALS</h2>
           <Separator className="mt-1 bg-secondary-400" />
           <ul className="mt-2 font-satoshi">
@@ -58,7 +60,9 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-1/5">
+
+        {/* Resources */}
+        <div className="w-full lg:w-1/5">
           <h2 className="text-xl font-bold text-accent-300">RESOURCES</h2>
           <Separator className="mt-1 bg-secondary-400" />
           <ul className="mt-2 font-satoshi">

@@ -30,29 +30,28 @@ export const HeroSection = () => {
 
   return (
     <section
-      className="flex h-full w-5/6 flex-col items-center justify-center gap-8 lg:h-1/2 lg:w-3/4 lg:flex-row lg:gap-16"
+      className="my-12 flex h-full w-5/6 flex-col items-center justify-center gap-8 md:flex-row lg:h-1/2 lg:w-3/4 lg:gap-16"
       id="home"
     >
       {/* Hero Text */}
-      <div className="relative z-10 order-2 flex flex-col items-center gap-8 lg:order-1 lg:items-start">
+      <div className="relative z-10 order-2 flex flex-col items-center gap-8 md:order-1 md:items-start">
         <motion.h1
-          className="w-3/4 text-center text-6xl font-bold leading-extratight lg:w-full lg:text-left lg:text-6xl"
+          className="w-full text-center text-5xl font-bold leading-extratight md:text-left md:text-6xl"
           variants={textVariants}
           initial="hidden"
           animate="visible"
           custom={0}
         >
-          Front-end React Developer
+          Frontend React Developer
         </motion.h1>
         <motion.p
-          className="w-3/4 text-center font-satoshi text-xl leading-relaxed lg:w-10/12 lg:text-left"
+          className="w-3/4 text-center font-satoshi text-lg leading-relaxed md:w-10/12 md:text-left md:text-xl"
           variants={textVariants}
           initial="hidden"
           animate="visible"
           custom={1}
         >
-          Hi, I'm Christian Razul. I can help you transform your Concept to a
-          Seamless User Experience.
+          I can help you transform your concept to a Seamless User Experience.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -82,7 +81,7 @@ export const HeroSection = () => {
         </motion.div>
       </div>
       {/* Picture */}
-      <div className="relative z-10 order-1 min-w-60 max-w-80 overflow-hidden lg:order-2">
+      <div className="relative z-10 order-1 w-40 min-w-60 max-w-80 overflow-hidden lg:order-2">
         <motion.div
           className="absolute bottom-0 left-0 right-0 bg-primary-200"
           initial="hidden"
