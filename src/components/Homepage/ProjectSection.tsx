@@ -34,7 +34,7 @@ const Project = ({ children }: { children: React.ReactNode }) => {
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="z-10 flex gap-8"
+      className="z-10 flex flex-col gap-4 lg:flex-row lg:gap-8"
     >
       {children}
     </motion.div>
@@ -49,20 +49,23 @@ export const ProjectSection = () => {
       className="flex h-full w-3/4 flex-col justify-center gap-8"
       id="projects"
     >
+      {/* Heading and Subheading */}
       <div className="flex flex-col gap-4">
         <h1 className="text-6xl font-bold leading-extratight">Projects</h1>
         <p className="text-left font-satoshi text-lg leading-relaxed">
           Check out some of the projects I've been working on recently.
         </p>
       </div>
+
+      {/* Projects Container */}
       <div className="flex w-full flex-col gap-8">
         <Project>
           <img
             src="/assets/img/cv-architect.webp"
             alt="CV Architect"
-            className="h-80 w-1/2 rounded-xl border object-cover shadow-md"
+            className="h-60 rounded-xl border object-cover shadow-md lg:h-80 lg:w-1/2"
           />
-          <div className="flex w-1/2 flex-col gap-4">
+          <div className="flex flex-col gap-4 lg:w-1/2">
             <h3 className="text-xl font-bold">CV Architect</h3>
             <p className="font-satoshi leading-relaxed">
               A resume builder application designed to help users create
@@ -100,9 +103,9 @@ export const ProjectSection = () => {
           <img
             src="/assets/img/market-basket.webp"
             alt="Market Basket"
-            className="h-80 w-1/2 rounded-xl border object-cover shadow-md"
+            className="h-60 rounded-xl border object-cover shadow-md lg:h-80 lg:w-1/2"
           />
-          <div className="flex w-1/2 flex-col gap-4">
+          <div className="flex flex-col gap-4 lg:w-1/2">
             <h3 className="text-xl font-bold">Market Basket</h3>
             <p className="font-satoshi leading-relaxed">
               An e-commerce application that helped solidify my skills and
@@ -139,9 +142,9 @@ export const ProjectSection = () => {
           <img
             src="/assets/img/memorycraft.webp"
             alt="MemoryCraft"
-            className="h-80 w-1/2 rounded-xl object-cover shadow-md"
+            className="h-60 rounded-xl object-cover shadow-md lg:h-80 lg:w-1/2"
           />
-          <div className="flex w-1/2 flex-col gap-4">
+          <div className="flex flex-col gap-4 lg:w-1/2">
             <h3 className="text-xl font-bold">MemoryCraft</h3>
             <p className="font-satoshi leading-relaxed">
               A delightful Minecraft-themed memory challenge game! This project
@@ -176,9 +179,9 @@ export const ProjectSection = () => {
           <img
             src="/assets/img/burger-heaven.webp"
             alt="MemoryCraft"
-            className="h-80 w-1/2 rounded-xl object-cover shadow-md"
+            className="h-60 rounded-xl object-cover shadow-md lg:h-80 lg:w-1/2"
           />
-          <div className="flex w-1/2 flex-col gap-4">
+          <div className=" flex flex-col gap-4 lg:w-1/2">
             <h3 className="text-xl font-bold">Burger Heaven</h3>
             <p className="font-satoshi leading-relaxed">
               A dynamic landing page for a fictional restaurant, built using
