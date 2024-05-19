@@ -30,7 +30,7 @@ export const HeroSection = () => {
 
   return (
     <section
-      className="my-12 flex h-full w-5/6 flex-col items-center justify-center gap-8 md:flex-row lg:h-1/2 lg:w-3/4 lg:gap-16"
+      className="my-6 flex h-full w-5/6 flex-col items-center justify-center gap-8 md:flex-row lg:h-1/2 lg:w-3/4 lg:gap-16"
       id="home"
     >
       {/* Hero Text */}

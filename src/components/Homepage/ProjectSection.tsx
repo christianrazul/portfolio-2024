@@ -46,11 +46,11 @@ export default Project;
 export const ProjectSection = () => {
   return (
     <section
-      className="flex h-full w-5/6 flex-col items-center justify-center gap-8 lg:h-1/2 lg:w-3/4 2xl:gap-16"
+      className="my-6 flex h-full w-5/6 flex-col items-center justify-center gap-8 lg:h-1/2 lg:w-3/4"
       id="projects"
     >
       {/* Heading and Subheading */}
-      <div className="flex w-full flex-col gap-4">
+      <div className="flex w-full flex-col gap-2 lg:gap-4">
         <h1 className="text-center text-4xl font-bold leading-extratight lg:text-left lg:text-6xl">
           Projects
         </h1>
@@ -73,9 +73,9 @@ export const ProjectSection = () => {
               A resume builder application designed to help users create
               professional-looking CVs with ease. This project is not only a
               tool for job seekers but also serves as my personal learning
-              project, where I delve into the depths of React's state
-              management, explore the intricacies of the useEffect hook, and
-              embrace the synergy of ShadCN and Tailwind CSS for styling.
+              project, where I delve into React's state management, explore the
+              the useEffect hook, and embrace ShadCN and Tailwind CSS for
+              styling.
             </p>
             <div className="flex flex-wrap gap-2">
               <SkillButton>React</SkillButton>

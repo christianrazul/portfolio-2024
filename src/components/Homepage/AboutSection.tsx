@@ -19,7 +19,7 @@ export const AboutSection = () => {
 
   return (
     <section
-      className="flex h-full w-5/6 flex-col justify-center gap-8 lg:h-1/2 lg:w-3/4"
+      className="my-6 flex h-full w-5/6 flex-col justify-center gap-8 lg:h-1/2 lg:w-3/4"
       id="about"
     >
       <motion.h1
