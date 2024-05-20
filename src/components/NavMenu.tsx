@@ -1,24 +1,36 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import AnimatedHamburgerButton from "./HamburgerButton";
+import { HashLink } from "react-router-hash-link";
 
 const navLinks = [
-  { title: "HOME", to: "/" },
+  { title: "HOME", to: "/#home" },
   { title: "ABOUT", to: "/#about" },
   { title: "PROJECTS", to: "/#projects" },
   { title: "CONTACT", to: "/contact" },
 ];
 
+const offsetScroll = (el: HTMLElement) => {
+  const offset = 35; // Set your desired offset value here
+  const elementPosition = el.offsetTop;
+  const offsetPosition = elementPosition - offset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth", // Optional: Use 'auto' to keep the instant scroll
+  });
+};
+
 const menuVariants = {
   initial: {
-    scaleY: 0,
+    scaleY: "0%",
   },
   animate: {
-    scaleY: 1,
+    scaleY: "100%",
     transition: { duration: 0.3, ease: [0.25, 0.75, 0.5, 1.25] },
   },
   exit: {
-    scaleY: 0,
+    scaleY: "0%",
     transition: { duration: 0.3, ease: [0.25, 0.75, 0.5, 1.25] },
   },
 };
@@ -63,8 +75,8 @@ const NavMenu = () => {
   };
   return (
     <div className="fixed right-8 top-4 z-50 lg:hidden">
-      <button onClick={toggleMenu}>Menu</button>
-      <AnimatePresence>
+      <AnimatedHamburgerButton onClick={toggleMenu} isActive={openNav} />
+      <AnimatePresence mode="wait">
         {openNav && (
           <motion.div
             className="fixed bottom-0 left-0 h-screen w-full origin-top bg-accent-400 px-8 py-4 text-secondary-500"
@@ -82,7 +94,6 @@ const NavMenu = () => {
                   alt="Portfolio Logo"
                   className="h-8 w-8"
                 />
-                <button onClick={toggleMenu}>Close</button>
               </motion.div>
               {/* NavLinks */}
               <motion.div
@@ -99,7 +110,14 @@ const NavMenu = () => {
                         className="font-overused text-6xl font-bold"
                         variants={mobileLinkVars}
                       >
-                        <NavLink to={link.to}>{link.title}</NavLink>
+                        <HashLink
+                          smooth
+                          scroll={offsetScroll}
+                          to={link.to}
+                          onClick={toggleMenu}
+                        >
+                          {link.title}
+                        </HashLink>
                       </motion.div>
                     </div>
                   );
