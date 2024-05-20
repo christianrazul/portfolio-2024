@@ -1,6 +1,19 @@
 import ContactForm from "@/components/Contactpage/ContactForm";
 import { DottedBackground } from "../components/DottedBackground";
 import { motion } from "framer-motion";
+
+const ContactPage = () => {
+  return (
+    <>
+      <ContactHeroSection />
+      <ContactForm />
+      <DottedBackground />
+    </>
+  );
+};
+
+export default ContactPage;
+
 const ContactHeroSection = () => {
   const textVariants = {
     hidden: { y: 30, opacity: 0 },
@@ -30,15 +43,3 @@ const ContactHeroSection = () => {
     </section>
   );
 };
-
-const ContactPage = () => {
-  return (
-    <>
-      <ContactHeroSection />
-      <ContactForm />
-      <DottedBackground />
-    </>
-  );
-};
-
-export default ContactPage;

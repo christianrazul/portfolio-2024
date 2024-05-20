@@ -2,9 +2,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import AnimatedHamburgerButton from "./HamburgerButton";
 import { HashLink } from "react-router-hash-link";
+import { NavLink } from "react-router-dom";
 
 const navLinks = [
-  { title: "HOME", to: "/#home" },
+  { title: "HOME", to: "/" },
   { title: "ABOUT", to: "/#about" },
   { title: "PROJECTS", to: "/#projects" },
   { title: "CONTACT", to: "/contact" },
@@ -90,11 +91,13 @@ const NavMenu = () => {
             <div className="flex h-full flex-col">
               {/* Close menu */}
               <motion.div className="flex justify-between">
-                <img
-                  src="/assets/portfolio-logo.svg"
-                  alt="Portfolio Logo"
-                  className="h-8 w-8"
-                />
+                <NavLink to="/" onClick={toggleMenu}>
+                  <img
+                    src="/assets/portfolio-logo.svg"
+                    alt="Portfolio Logo"
+                    className="h-8 w-8"
+                  />
+                </NavLink>
               </motion.div>
               {/* NavLinks */}
               <motion.div
@@ -128,19 +131,35 @@ const NavMenu = () => {
               <div className="flex h-28 flex-col gap-2">
                 <div>
                   <h3 className="font-bold">EMAIL ADDRESS</h3>
-                  <p className="font-satoshi font-medium text-primary-200">
+                  <a
+                    href="mailto:razulchristian@gmail.com"
+                    target="_blank"
+                    className="font-satoshi font-medium text-primary-200"
+                  >
                     razulchristian@gmail.com
-                  </p>
+                  </a>
                 </div>
                 <ul className="flex gap-x-4">
-                  <li className="rounded-full bg-accent-300 px-4 py-1">
-                    LINKEDIN
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/rcrrazul/"
+                      target="_blank"
+                    >
+                      LINKEDIN
+                    </a>
                   </li>
-                  <li className="rounded-full bg-accent-300 px-4 py-1">
-                    GITHUB
+                  <li>
+                    <a href="https://github.com/christianrazul" target="_blank">
+                      GITHUB
+                    </a>
                   </li>
-                  <li className="rounded-full bg-accent-300 px-4 py-1">
-                    FACEBOOK
+                  <li>
+                    <a
+                      href="https://www.facebook.com/christianrazul/"
+                      target="_blank"
+                    >
+                      FACEBOOK
+                    </a>
                   </li>
                 </ul>
               </div>
