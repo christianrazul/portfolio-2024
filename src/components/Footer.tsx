@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer className="relative z-10 flex h-full w-5/6 flex-col gap-8 py-8 lg:w-2/3">
+    <footer className="relative z-10 flex h-full w-5/6 flex-col gap-8 py-8 lg:w-3/4">
       <div className="flex w-full flex-wrap gap-4 lg:flex-nowrap lg:gap-8">
         {/* Navigation */}
         <div className="w:full flex-grow lg:w-3/5">
