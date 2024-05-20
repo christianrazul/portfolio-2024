@@ -16,10 +16,11 @@ const ContactHeroSection = () => {
       },
     }),
   };
+
   return (
     <section className="relative z-10 flex h-full w-3/4 items-center justify-center gap-16">
       <motion.h1
-        className="text-8xl font-bold"
+        className="text-5xl font-bold"
         variants={textVariants}
         initial="hidden"
         animate="visible"

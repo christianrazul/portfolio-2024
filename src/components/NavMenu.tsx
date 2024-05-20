@@ -73,6 +73,7 @@ const NavMenu = () => {
   const toggleMenu = () => {
     setOpenNav((prevOpen) => !prevOpen);
   };
+
   return (
     <div className="fixed right-8 top-4 z-50 lg:hidden">
       <AnimatedHamburgerButton onClick={toggleMenu} isActive={openNav} />

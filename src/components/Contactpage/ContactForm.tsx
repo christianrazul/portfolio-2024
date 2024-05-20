@@ -86,7 +86,7 @@ const ContactForm = () => {
 
   return (
     <motion.section
-      className="relative z-10 flex h-full w-3/4 items-start justify-between gap-16 font-satoshi"
+      className="relative z-10 flex h-full w-3/4 flex-col items-start justify-between gap-16 font-satoshi lg:flex-row"
       variants={textVariants}
       initial="hidden"
       animate="visible"
@@ -95,7 +95,7 @@ const ContactForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-3/4 space-y-8"
+          className="w-full space-y-8 lg:w-3/4"
           ref={formRef}
         >
           <FormField
