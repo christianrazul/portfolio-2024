@@ -1,6 +1,27 @@
 import { motion } from "framer-motion";
 import { SkillButton } from "../SkillButton";
 
+const technicalSkills = [
+  "JavaScript",
+  "TypeScript",
+  "React.js",
+  "Redux",
+  "Node.js",
+  "Express",
+  "MongoDB",
+  "Tailwind",
+  "Framer Motion",
+  "HTML",
+  "CSS",
+];
+
+const toolsAndTechnologies = [
+  "GitHub",
+  "Figma",
+  "Photoshop",
+  "Microsoft Office",
+];
+
 export const AboutSection = () => {
   const textVariants = {
     hidden: { y: 30, opacity: 0 },
@@ -88,39 +109,11 @@ export const AboutSection = () => {
               Technical Skills
             </h2>
             <ul className="flex flex-wrap gap-2">
-              <li>
-                <SkillButton>JavaScript</SkillButton>
-              </li>
-              <li>
-                <SkillButton>TypeScript</SkillButton>
-              </li>
-              <li>
-                <SkillButton>React</SkillButton>
-              </li>
-              <li>
-                <SkillButton>Redux</SkillButton>
-              </li>
-              <li>
-                <SkillButton>NodeJS</SkillButton>
-              </li>
-              <li>
-                <SkillButton>Express</SkillButton>
-              </li>
-              <li>
-                <SkillButton>MongoDB</SkillButton>
-              </li>
-              <li>
-                <SkillButton>Tailwind</SkillButton>
-              </li>
-              <li>
-                <SkillButton>Framer Motion</SkillButton>
-              </li>
-              <li>
-                <SkillButton>HTML</SkillButton>
-              </li>
-              <li>
-                <SkillButton>CSS</SkillButton>
-              </li>
+              {technicalSkills.map((skill) => (
+                <li key={skill}>
+                  <SkillButton>{skill}</SkillButton>
+                </li>
+              ))}
             </ul>
           </motion.div>
           <motion.div
@@ -135,18 +128,11 @@ export const AboutSection = () => {
               Tools and Technologies
             </h2>
             <ul className="flex flex-wrap gap-2">
-              <li>
-                <SkillButton>GitHub</SkillButton>
-              </li>
-              <li>
-                <SkillButton>Figma</SkillButton>
-              </li>
-              <li>
-                <SkillButton>Photoshop</SkillButton>
-              </li>
-              <li>
-                <SkillButton>Microsoft Office</SkillButton>
-              </li>
+              {toolsAndTechnologies.map((tool) => (
+                <li key={tool}>
+                  <SkillButton>{tool}</SkillButton>
+                </li>
+              ))}
             </ul>
           </motion.div>
         </div>
